@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC Club Student Feedbacks</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f0f4ff;
+            background-image: 
+                radial-gradient(circle at 100% 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 100% 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                linear-gradient(#9abcff 0.5px, transparent 0.5px),
+                linear-gradient(to right, #9abcff 0.5px, #f0f4ff 0.5px);
+            background-size: 40px 40px;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="bg-white/90 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+        <div class="flex flex-col items-center justify-center mb-8">
+            <img src="https://github.com/yash-dev-ml/data/blob/main/unnamed.jpg?raw=true" alt="TIC Club Logo" class="w-24 h-24 mb-4 rounded-full shadow-md">
+            <h1 class="text-3xl font-bold text-indigo-600 text-center">TIC Club Student Feedbacks</h1>
+        </div>
+
+        <div class="space-y-8">
+            {% for feedback in feedbacks %}
+                <div class="bg-indigo-50 p-6 rounded-lg shadow-inner">
+                    <h3 class="text-xl font-semibold text-indigo-800 mb-4">Feedback #{{ loop.index }}</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="text-lg font-medium text-indigo-600 mb-2">Attendance Issue</h4>
+                            <p class="text-gray-700">{{ feedback.attendance_issue }}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-purple-600 mb-2">Study Issue</h4>
+                            <p class="text-gray-700">{{ feedback.study_issue }}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-blue-600 mb-2">Improvement Suggestion</h4>
+                            <p class="text-gray-700">{{ feedback.improvement_suggestion }}</p>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-medium text-green-600 mb-2">Event Issue</h4>
+                            <p class="text-gray-700">{{ feedback.event_issue }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

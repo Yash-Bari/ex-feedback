@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC Club Student Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f0f4ff;
+            background-image: 
+                radial-gradient(circle at 100% 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 100% 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                linear-gradient(#9abcff 0.5px, transparent 0.5px),
+                linear-gradient(to right, #9abcff 0.5px, #f0f4ff 0.5px);
+            background-size: 40px 40px;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-full max-w-3xl">
+        <div class="flex flex-col items-center justify-center mb-8">
+            <img src="https://github.com/yash-dev-ml/data/blob/main/unnamed.jpg?raw=true" alt="TIC Club Logo" class="w-32 h-32 mb-4 rounded-full shadow-md">
+            <h1 class="text-3xl font-bold text-indigo-600 text-center">TIC Club Student Survey</h1>
+        </div>
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6 rounded-lg">
+            <p class="text-yellow-700"><strong>Note:</strong> Your responses to this survey will be completely anonymous. We value your honest feedback to improve our college experience.</p>
+        </div>
+        <form method="POST" class="space-y-8">
+            <div class="space-y-6">
+                <div class="bg-indigo-100/80 backdrop-blur-sm p-6 rounded-lg shadow-inner">
+                    <h2 class="text-2xl font-semibold text-indigo-700 mb-4">Attendance</h2>
+                    <label for="attendance_issue" class="block text-xl font-semibold text-indigo-800 mb-3">Why are you not attending college regularly?</label>
+                    <textarea id="attendance_issue" name="attendance_issue" required class="w-full px-4 py-3 text-gray-700 bg-white border border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow duration-300" rows="4" placeholder="Your anonymous response here..."></textarea>
+                </div>
+                
+                <div class="bg-purple-100/80 backdrop-blur-sm p-6 rounded-lg shadow-inner">
+                    <h2 class="text-2xl font-semibold text-purple-700 mb-4">Academic Challenges</h2>
+                    <label for="study_issue" class="block text-xl font-semibold text-purple-800 mb-3">What challenges are you facing in your studies?</label>
+                    <textarea id="study_issue" name="study_issue" required class="w-full px-4 py-3 text-gray-700 bg-white border border-purple-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 transition-shadow duration-300" rows="4" placeholder="Your anonymous response here..."></textarea>
+                </div>
+                
+                <div class="bg-blue-100/80 backdrop-blur-sm p-6 rounded-lg shadow-inner">
+                    <h2 class="text-2xl font-semibold text-blue-700 mb-4">Improvements</h2>
+                    <label for="improvement_suggestion" class="block text-xl font-semibold text-blue-800 mb-3">What can be improved to increase your interest in learning?</label>
+                    <textarea id="improvement_suggestion" name="improvement_suggestion" required class="w-full px-4 py-3 text-gray-700 bg-white border border-blue-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition-shadow duration-300" rows="4" placeholder="Your anonymous response here..."></textarea>
+                </div>
+                
+                <div class="bg-green-100/80 backdrop-blur-sm p-6 rounded-lg shadow-inner">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Event Participation</h2>
+                    <label for="event_issue" class="block text-xl font-semibold text-green-800 mb-3">Why are you not participating in college events?</label>
+                    <textarea id="event_issue" name="event_issue" required class="w-full px-4 py-3 text-gray-700 bg-white border border-green-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 transition-shadow duration-300" rows="4" placeholder="Your anonymous response here..."></textarea>
+                </div>
+            </div>
+            
+            <button type="submit" class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105">Submit Anonymous Survey</button>
+        </form>
+    </div>
+</body>
+</html>

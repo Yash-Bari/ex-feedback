@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - TIC Club Student Survey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #f0f4ff;
+            background-image: 
+                radial-gradient(circle at 100% 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 100%, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 100% 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                radial-gradient(circle at 0 0, #9abcff 0, #9abcff 3px, transparent 3px),
+                linear-gradient(#9abcff 0.5px, transparent 0.5px),
+                linear-gradient(to right, #9abcff 0.5px, #f0f4ff 0.5px);
+            background-size: 40px 40px;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white/90 backdrop-blur-sm p-8 rounded-xl shadow-lg w-full max-w-2xl text-center">
+        <div class="flex flex-col items-center justify-center mb-8">
+            <img src="https://github.com/yash-dev-ml/data/blob/main/unnamed.jpg?raw=true" alt="TIC Club Logo" class="w-32 h-32 mb-4 rounded-full shadow-md">
+            <h1 class="text-3xl font-bold text-indigo-600">TIC Club Student Survey</h1>
+        </div>
+        
+        <div class="space-y-4 transition-opacity duration-300">
+            <h2 class="text-3xl font-semibold text-green-600 mb-4">Thank You!</h2>
+            <p class="text-xl text-gray-700">Your responses have been submitted successfully. We appreciate your feedback and will use it to improve your college experience.</p>
+        </div>
+        
+        <div class="mt-12 space-y-4">
+            <p class="text-lg text-indigo-700">Your input is valuable to us and will help shape the future of our college community.</p>
+            <p class="text-md text-gray-600">If you have any additional thoughts or concerns, please don't hesitate to reach out to the TIC Club representatives.</p>
+        </div>
+        
+        <a href="/" class="inline-block mt-8 px-6 py-3 bg-indigo-600 text-white rounded-lg text-lg font-semibold hover:bg-indigo-700 transition duration-300 transform hover:scale-105">Return to Homepage</a>
+    </div>
+</body>
+</html>
