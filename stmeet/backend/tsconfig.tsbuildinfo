@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/passport.ts","./src/managers/roommanager.ts","./src/managers/usermanger.ts","./src/models/user.ts","./src/routes/auth.ts"],"version":"5.6.3"}
